@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6822fcb04637e5249b8a41a643b75716, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9d3404bd4a54cf3449019538cfb36fbf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -77,7 +77,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d992ce00debe66148a472ebd9ae82e8e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 60d363371d03c9a419dec02a9dbee188, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -167,7 +167,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NINAnimatorController
+  m_Name: BOYAnimatorController 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isSteady
@@ -338,7 +338,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7b5580c6680bf5b44a43b71c127f8dc4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5e1cc00f2cf0f764e81abdf0d33ecd70, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -392,7 +392,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7f349801aaaa37441bdeddc61429e0fc, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8b70f1904c82f2f4c8ca55b74e99d244, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -473,7 +473,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6711ac0ed4b580a4d8e9afe10619d19e, type: 2}
+  m_Motion: {fileID: 7400000, guid: c9192f5da9d415549b77354190981956, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
