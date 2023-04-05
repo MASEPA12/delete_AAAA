@@ -19,6 +19,8 @@ public class playerController : MonoBehaviour
         Physics.gravity *= gravityModifier;
         rb = GetComponent<Rigidbody>();
         //isJumping = false;
+        rb.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
+
     }
 
     private void Update()
@@ -27,22 +29,18 @@ public class playerController : MonoBehaviour
 
         if (crouchPressed)
         {
-            animator.SetBool("isSteady", false); //ja no esta`dret
+            animator.SetBool("isSteady", false); //ja no esta`dret 
 
         }
         if (!crouchPressed)
         {
             animator.SetBool("isSteady", true); //si no pitj, està dret
-             
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.AddForce(Vector3.forward * walkingForce, ForceMode.Force);
+            //rb.AddForce(Vector3.forward * walkingForce, ForceMode.Force);
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //bota
         {
-            rb.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
             animator.SetBool("isJumping", true);
 
         }
