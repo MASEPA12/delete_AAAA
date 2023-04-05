@@ -19,7 +19,6 @@ public class playerController : MonoBehaviour
         Physics.gravity *= gravityModifier;
         rb = GetComponent<Rigidbody>();
         //isJumping = false;
-        rb.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
 
     }
 
@@ -41,6 +40,8 @@ public class playerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)) //bota
         {
+            rb.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
+
             animator.SetBool("isJumping", true);
 
         }
