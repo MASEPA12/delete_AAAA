@@ -51,7 +51,14 @@ public class playerController : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
     }
 }
 
