@@ -8,21 +8,23 @@ public class playerController : MonoBehaviour
     public float walkingForce = 0.5f;
    
     public float jumpingForce = 0.2f;
-    private float gravityModifier = 1.5f;
+    //private float gravityModifier = 1.5f;
 
     //private bool isJumping;
     public Animator animator;
 
     private float speed = 2f;
-    private float turnSpeed = 100f;
-    private float rotationInput;
+    //private float turnSpeed = 100f;
+    private float horizontalInput;
     private float verticalInput;
+
+    public Vector3 movement; 
 
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        Physics.gravity *= gravityModifier;
+        //Physics.gravity *= gravityModifier;
         rb = GetComponent<Rigidbody>();
         //isJumping = false;
 
@@ -30,21 +32,18 @@ public class playerController : MonoBehaviour
 
     private void Update()
     {
+        verticalInput = Input.GetAxis("Vertical"); //movement front/back 
+        horizontalInput = Input.GetAxis("Horizontal"); //side movement
 
-        verticalInput = Input.GetAxis("Vertical"); //movement front/back
+        movement = new Vector3(horizontalInput,0,verticalInput);
+        transform.Translate(movement * speed * Time.deltaTime);
+
+        //PlayerMovement(movement);
+
+        /*verticalInput = Input.GetAxis("Vertical"); //movement front/back
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
-
-
         rotationInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * rotationInput); //rotation
-
-         
-        if(Input.GetKeyDown(KeyCode.R) && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))) //si camin front/back and vaig acotda
-        {
-            transform.Translate(Vector3.forward * speed/2 * Time.deltaTime * verticalInput);
-            animator.SetBool("isMovingCrouched", true);
-        }
-
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * rotationInput); //rotation*/
 
         //CROUCH
         if (Input.GetKey(KeyCode.R))
@@ -79,7 +78,6 @@ public class playerController : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
-
         //PATADA
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -100,7 +98,16 @@ public class playerController : MonoBehaviour
         {
             animator.SetBool("isShooting", false);
         }
+    }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
+    public void PlayerMovement(Vector3 direction)
+    {
+        rb.AddForce(direction * speed * Time.fixedDeltaTime);
     }
 }
 
