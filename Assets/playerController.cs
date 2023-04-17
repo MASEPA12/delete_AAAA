@@ -49,7 +49,7 @@ public class playerController : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             animator.SetBool("isSteady", false); //ja no esta`dret  
-            animator.SetBool("isRunning", false); //ja no esta`dret  
+            animator.SetBool("isRunning", false); //ja no esta`dret  //pensar a canviar ses velocitats quan va cap enrrere i acotada (speed/2 quan is steady true o algo així)
         }
         if (!Input.GetKey(KeyCode.R))
         {
@@ -76,6 +76,16 @@ public class playerController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+        }
+
+        //RUNNING BCK
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("isRunningBck", true);
+        }
+        else
+        {
+            animator.SetBool("isRunningBck", false);
         }
 
         //PATADA

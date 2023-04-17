@@ -805,8 +805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   walkingForce: 0.5
-  jumpingForce: 0.2
+  jumpingForce: 5
   animator: {fileID: 0}
+  movement: {x: 0, y: 0, z: 0}
 --- !u!95 &602597791
 Animator:
   serializedVersion: 5
